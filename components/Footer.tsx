@@ -94,7 +94,7 @@ export default function Footer() {
               aria-label="Join WICC WhatsApp Community"
             >
               <div className="relative w-4 h-4 flex-shrink-0">
-                <Image src="/whatsapp_logo.jpg" alt="" fill sizes="16px" className="object-contain rounded-sm" />
+                <Image src="/whatsapp_logo.png" alt="" fill sizes="16px" className="object-contain" />
               </div>
               Join our Community
             </a>
