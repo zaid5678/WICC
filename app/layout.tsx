@@ -18,6 +18,7 @@ const lato = Lato({
 })
 
 export const metadata: Metadata = {
+  icons: { icon: '/logo.jpg' },
   title: 'Westminster Islamic Community Centre | WICC',
   description:
     "The Westminster Islamic Community Centre (WICC) — empowering the community, rooted in faith. Friday prayers, Eid Salah, Islamic education and community events in London SW1V.",
