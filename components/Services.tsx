@@ -468,7 +468,7 @@ export default function Services() {
             style={{ fontFamily: 'var(--font-body)', background: 'linear-gradient(135deg, #25D366, #1da851)' }}
           >
             <div className="relative w-4 h-4 flex-shrink-0">
-              <Image src="/whatsapp_logo.png" alt="" fill sizes="16px" className="object-contain" />
+              <Image src="/hd_whatsapp-Photoroom.png" alt="" fill sizes="16px" className="object-contain" />
             </div>
             Find Out More on WhatsApp
           </a>

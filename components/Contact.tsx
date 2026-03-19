@@ -89,7 +89,7 @@ export default function Contact() {
             <div className="flex items-center gap-5 mb-8">
               <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 drop-shadow-lg">
                 <Image
-                  src="/whatsapp_logo.png"
+                  src="/hd_whatsapp-Photoroom.png"
                   alt="WhatsApp"
                   fill
                   sizes="80px"
@@ -162,7 +162,7 @@ export default function Contact() {
               aria-label="Join WICC WhatsApp Community"
             >
               <div className="relative w-5 h-5 flex-shrink-0">
-                <Image src="/whatsapp_logo.png" alt="" fill sizes="20px" className="object-contain" />
+                <Image src="/hd_whatsapp-Photoroom.png" alt="" fill sizes="20px" className="object-contain" />
               </div>
               Join the Community
               <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300">
