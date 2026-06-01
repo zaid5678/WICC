@@ -57,22 +57,37 @@ export default function Navbar() {
         <ul className="hidden md:flex items-center gap-1" role="list">
           {navLinks.map(({ label, href }) => {
             const active = pathname === href
+            const isContact = label === 'Contact'
             return (
               <li key={label}>
-                <Link
-                  href={href}
-                  className={`relative px-4 py-2 text-sm tracking-wide transition-colors duration-300 group inline-block ${
-                    active ? 'text-[#e8d5a3]' : 'text-white/85 hover:text-[#e8d5a3]'
-                  }`}
-                  style={{ fontFamily: 'var(--font-body)' }}
-                >
-                  {label}
-                  <span
-                    className={`absolute bottom-1 left-4 right-4 h-px bg-[#c9a84c] transition-transform duration-300 origin-left ${
-                      active ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                {isContact ? (
+                  <Link
+                    href={href}
+                    className="relative px-4 py-2 text-sm tracking-wide transition-all duration-300 inline-block rounded-full text-white font-medium hover:brightness-110"
+                    style={{
+                      fontFamily: 'var(--font-body)',
+                      background: 'linear-gradient(135deg, #e0b84a, #c9a84c)',
+                      boxShadow: active ? '0 0 0 2px rgba(201,168,76,0.5)' : undefined,
+                    }}
+                  >
+                    {label}
+                  </Link>
+                ) : (
+                  <Link
+                    href={href}
+                    className={`relative px-4 py-2 text-sm tracking-wide transition-colors duration-300 group inline-block ${
+                      active ? 'text-[#e8d5a3]' : 'text-white/85 hover:text-[#e8d5a3]'
                     }`}
-                  />
-                </Link>
+                    style={{ fontFamily: 'var(--font-body)' }}
+                  >
+                    {label}
+                    <span
+                      className={`absolute bottom-1 left-4 right-4 h-px bg-[#c9a84c] transition-transform duration-300 origin-left ${
+                        active ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                      }`}
+                    />
+                  </Link>
+                )}
               </li>
             )
           })}
@@ -101,20 +116,37 @@ export default function Navbar() {
         style={{ background: '#1a2244' }}
       >
         <ul className="py-2" role="list">
-          {navLinks.map(({ label, href }) => (
-            <li key={label}>
-              <Link
-                href={href}
-                onClick={() => setMenuOpen(false)}
-                className={`block px-8 py-3.5 text-base tracking-wide transition-all duration-200 ${
-                  pathname === href ? 'text-[#e8d5a3]' : 'text-white/85 hover:text-[#e8d5a3] hover:bg-white/5'
-                }`}
-                style={{ fontFamily: 'var(--font-body)' }}
-              >
-                {label}
-              </Link>
-            </li>
-          ))}
+          {navLinks.map(({ label, href }) => {
+            const isContact = label === 'Contact'
+            return (
+              <li key={label}>
+                {isContact ? (
+                  <Link
+                    href={href}
+                    onClick={() => setMenuOpen(false)}
+                    className="block mx-8 my-2 px-6 py-3 text-base tracking-wide text-center rounded-full text-white font-medium transition-all duration-200 hover:brightness-110"
+                    style={{
+                      fontFamily: 'var(--font-body)',
+                      background: 'linear-gradient(135deg, #e0b84a, #c9a84c)',
+                    }}
+                  >
+                    {label}
+                  </Link>
+                ) : (
+                  <Link
+                    href={href}
+                    onClick={() => setMenuOpen(false)}
+                    className={`block px-8 py-3.5 text-base tracking-wide transition-all duration-200 ${
+                      pathname === href ? 'text-[#e8d5a3]' : 'text-white/85 hover:text-[#e8d5a3] hover:bg-white/5'
+                    }`}
+                    style={{ fontFamily: 'var(--font-body)' }}
+                  >
+                    {label}
+                  </Link>
+                )}
+              </li>
+            )
+          })}
         </ul>
       </div>
     </nav>
