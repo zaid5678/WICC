@@ -28,42 +28,6 @@ export default function Jummah() {
 
       <div className="relative max-w-4xl mx-auto px-6 sm:px-10 py-20 sm:py-28">
 
-        {/* Section header */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeUp}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-14"
-        >
-          <div className="flex items-center gap-4 justify-center mb-5">
-            <span className="block h-px w-12 bg-[#c9a84c]" />
-            <span
-              className="text-[#c9a84c] text-xs tracking-[0.4em] uppercase"
-              style={{ fontFamily: 'var(--font-body)' }}
-            >
-              Every Friday
-            </span>
-            <span className="block h-px w-12 bg-[#c9a84c]" />
-          </div>
-
-          <h1
-            id="jummah-heading"
-            className="text-5xl sm:text-6xl lg:text-7xl text-white mb-3"
-            style={{ fontFamily: 'var(--font-display)', fontWeight: 400 }}
-          >
-            Jumu&apos;ah{' '}
-            <span className="gradient-gold-bright italic font-semibold">Prayer</span>
-          </h1>
-
-          <p
-            className="text-[#e8d5a3]/60 text-base sm:text-lg tracking-widest uppercase mt-2"
-            style={{ fontFamily: 'var(--font-body)' }}
-          >
-            صلاة الجمعة
-          </p>
-        </motion.div>
-
         {/* Address card */}
         <motion.div
           initial="hidden"

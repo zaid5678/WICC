@@ -3,9 +3,10 @@
 interface PageBannerProps {
   title: string
   subtitle?: string
+  arabic?: string
 }
 
-export default function PageBanner({ title, subtitle }: PageBannerProps) {
+export default function PageBanner({ title, subtitle, arabic }: PageBannerProps) {
   return (
     <div
       className="relative pt-32 pb-20 px-6 overflow-hidden"
@@ -53,6 +54,15 @@ export default function PageBanner({ title, subtitle }: PageBannerProps) {
             style={{ fontFamily: 'var(--font-body)' }}
           >
             {subtitle}
+          </p>
+        )}
+
+        {arabic && (
+          <p
+            className="mt-2 text-[#e8d5a3]/50 text-base tracking-widest"
+            style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic' }}
+          >
+            {arabic}
           </p>
         )}
 

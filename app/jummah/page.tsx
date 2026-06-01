@@ -17,6 +17,7 @@ export default function JummahPage() {
         <PageBanner
           title="Jumu'ah Prayer"
           subtitle="Friday congregational prayer — every week."
+          arabic="صلاة الجمعة"
         />
         <Jummah />
       </main>
