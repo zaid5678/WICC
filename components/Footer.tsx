@@ -150,12 +150,13 @@ export default function Footer() {
                 border: '1px solid rgba(201,168,76,0.12)',
               }}
             >
-              <p
-                className="text-[#e8d5a3]/60 text-xs"
+              <Link
+                href="/jummah"
+                className="text-[#e8d5a3]/60 text-xs hover:text-[#e8d5a3] transition-colors duration-200"
                 style={{ fontFamily: 'var(--font-body)', fontStyle: 'italic' }}
               >
-                Jumu&apos;ah prayers every Friday at 1:00 PM
-              </p>
+                Jumu&apos;ah prayers every Friday — view times →
+              </Link>
             </div>
           </div>
         </div>
