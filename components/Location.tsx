@@ -203,7 +203,7 @@ export default function Location() {
                   {
                     icon: '🚌',
                     label: 'Bus',
-                    value: 'Routes 2, 36, 185, 436',
+                    value: 'Routes 2, 36, 185',
                   },
                   {
                     icon: '🅿️',

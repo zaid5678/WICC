@@ -35,22 +35,6 @@ const events = [
     featured: false,
     color: '#4a7fbe',
   },
-  {
-    id: 3,
-    category: 'Education',
-    title: 'Quran Circle for Beginners',
-    subtitle: 'حلقة القرآن الكريم',
-    date: 'Saturday 29th March',
-    time: '11:00 AM',
-    year: '2025',
-    speaker: 'Sheikh Ahmed Al-Rashid',
-    location: 'Lillington Gardens Community Centre',
-    address: 'Morgan House, 57 Vauxhall Bridge Rd, SW1V 2LF',
-    description:
-      'An introductory Quran circle for adults new to Islamic studies. Learn proper tajweed, recitation, and the meaning of selected surahs in a warm, welcoming environment.',
-    featured: false,
-    color: '#6b9e6b',
-  },
 ]
 
 const fadeUp = {

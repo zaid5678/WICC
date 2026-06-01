@@ -38,24 +38,6 @@ const spiritualServices = [
   {
     icon: (
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-10 h-10">
-        <path d="M24 10v28M24 10C24 10 12 8 8 10v26c4-2 16 0 16 0M24 10c0 0 12-2 16 0v26c-4-2-16 0-16 0" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-        <line x1="12" y1="18" x2="21" y2="18" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
-        <line x1="12" y1="22" x2="21" y2="22" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
-        <line x1="12" y1="26" x2="21" y2="26" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
-        <line x1="27" y1="18" x2="36" y2="18" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
-        <line x1="27" y1="22" x2="36" y2="22" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
-        <line x1="27" y1="26" x2="36" y2="26" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
-      </svg>
-    ),
-    title: "Islamic Education",
-    arabic: "التعليم الإسلامي",
-    subtitle: "Quran & Studies",
-    description: "Quranic recitation classes, Islamic history lectures, and Arabic language lessons for all ages — from children to adults.",
-    tag: "Ongoing",
-  },
-  {
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-10 h-10">
         <circle cx="16" cy="16" r="6" stroke="currentColor" strokeWidth="1.5" />
         <circle cx="32" cy="16" r="6" stroke="currentColor" strokeWidth="1.5" />
         <circle cx="24" cy="26" r="6" stroke="currentColor" strokeWidth="1.5" />
@@ -129,7 +111,7 @@ const martialArtsClasses: MartialArtsClass[] = [
     ageGroup: 'youth',
     genderLabel: 'Girls & Women',
     genderGroup: 'female',
-    description: 'Empowering kickboxing classes in a safe, women-only space. Technique, fitness, and self-defence for teen girls and adult women.',
+    description: 'Stand-up striking, footwork, pad work, technique drilling and sparring in a safe, women-only space. Builds discipline, fitness, and confidence for teen girls and adult women.',
   },
   {
     sport: 'kickboxing',
