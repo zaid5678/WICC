@@ -48,7 +48,7 @@ export default function Navbar() {
               className="text-[#e8d5a3] text-[10px] tracking-widest leading-tight opacity-80"
               style={{ fontFamily: 'var(--font-body)' }}
             >
-              Westminster Islamic Cultural Centre
+              Westminster Islamic Community Centre
             </div>
           </div>
         </Link>

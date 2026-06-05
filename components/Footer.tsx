@@ -68,7 +68,7 @@ export default function Footer() {
                   className="text-[#c9a84c]/60 text-xs tracking-widest leading-tight"
                   style={{ fontFamily: 'var(--font-body)' }}
                 >
-                  Westminster Islamic Cultural Centre
+                  Westminster Islamic Community Centre
                 </div>
               </div>
             </Link>
