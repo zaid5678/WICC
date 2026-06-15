@@ -179,6 +179,51 @@ export default function Contact() {
             </p>
           </div>
         </motion.div>
+
+        {/* Secondary contact options */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-8 flex flex-col sm:flex-row gap-4 justify-center"
+        >
+          <a
+            href="mailto:wislamiccc@gmail.com"
+            className="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full text-sm transition-all duration-300 hover:scale-105"
+            style={{
+              fontFamily: 'var(--font-body)',
+              background: '#fff',
+              color: '#1a2244',
+              boxShadow: '0 4px 20px rgba(26,34,68,0.08), 0 0 0 1px rgba(26,34,68,0.06)',
+            }}
+          >
+            <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4 flex-shrink-0 text-[#c9a84c]">
+              <rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" strokeWidth="1.3" />
+              <path d="M2 7l8 5 8-5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
+            </svg>
+            wislamiccc@gmail.com
+          </a>
+          <a
+            href="https://www.instagram.com/westminsterislamiccc"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full text-sm transition-all duration-300 hover:scale-105"
+            style={{
+              fontFamily: 'var(--font-body)',
+              background: '#fff',
+              color: '#1a2244',
+              boxShadow: '0 4px 20px rgba(26,34,68,0.08), 0 0 0 1px rgba(26,34,68,0.06)',
+            }}
+          >
+            <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4 flex-shrink-0 text-[#c9a84c]">
+              <rect x="2" y="2" width="16" height="16" rx="4" stroke="currentColor" strokeWidth="1.3" />
+              <circle cx="10" cy="10" r="3.5" stroke="currentColor" strokeWidth="1.3" />
+              <circle cx="14.5" cy="5.5" r="0.75" fill="currentColor" />
+            </svg>
+            @westminsterislamiccc
+          </a>
+        </motion.div>
       </div>
     </section>
   )
