@@ -8,7 +8,6 @@ const footerLinks = [
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
   { label: 'Events', href: '/events' },
-  { label: 'Find Us', href: '/find-us' },
   { label: 'Contact', href: '/contact' },
 ]
 
@@ -123,26 +122,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Address column */}
+          {/* Contact column */}
           <div>
-            <h3
-              className="text-[#c9a84c] text-xs tracking-[0.35em] uppercase mb-5"
-              style={{ fontFamily: 'var(--font-body)' }}
-            >
-              Our Venue
-            </h3>
-            <address className="not-italic space-y-1.5">
-              <p className="text-white/50 text-sm" style={{ fontFamily: 'var(--font-body)' }}>
-                Lillington Gardens Community Centre
-              </p>
-              <p className="text-white/50 text-sm" style={{ fontFamily: 'var(--font-body)' }}>
-                Morgan House, 57 Vauxhall Bridge Road
-              </p>
-              <p className="text-white/50 text-sm" style={{ fontFamily: 'var(--font-body)' }}>
-                London SW1V 2LF
-              </p>
-            </address>
-
             <div
               className="mt-5 p-4 rounded-xl"
               style={{

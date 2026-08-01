@@ -218,37 +218,6 @@ export default function About() {
                 and every heart finds home.&rdquo;
               </p>
             </motion.blockquote>
-
-            {/* Stats */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: '-80px' }}
-              variants={fadeUp}
-              transition={{ duration: 0.7, delay: 0.4 }}
-              className="grid grid-cols-3 gap-6 pt-4"
-            >
-              {[
-                { number: '500+', label: 'Worshippers' },
-                { number: '7', label: 'Days a Week' },
-                { number: '10+', label: 'Years Serving' },
-              ].map(({ number, label }) => (
-                <div key={label} className="text-center">
-                  <div
-                    className="text-3xl sm:text-4xl gradient-gold mb-1"
-                    style={{ fontFamily: 'var(--font-display)', fontWeight: 600 }}
-                  >
-                    {number}
-                  </div>
-                  <div
-                    className="text-[#1c1c1e]/55 text-xs tracking-widest uppercase"
-                    style={{ fontFamily: 'var(--font-body)' }}
-                  >
-                    {label}
-                  </div>
-                </div>
-              ))}
-            </motion.div>
           </div>
         </div>
       </div>
