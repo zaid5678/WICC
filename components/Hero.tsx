@@ -183,7 +183,7 @@ export default function Hero() {
             className="text-[#e8d5a3] text-xs tracking-[0.35em] uppercase"
             style={{ fontFamily: 'var(--font-body)' }}
           >
-            Est. Westminster, London
+            Est. 1990 · Westminster, London
           </span>
           <span className="block w-16 h-px bg-gradient-to-l from-transparent to-[#c9a84c]" />
         </motion.div>
