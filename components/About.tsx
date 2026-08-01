@@ -175,9 +175,10 @@ export default function About() {
               className="text-[#1c1c1e]/75 text-lg leading-relaxed"
               style={{ fontFamily: 'var(--font-body)' }}
             >
-              The Westminster Islamic Community Centre is a welcoming home for Muslims and neighbours
-              across the heart of London. We are dedicated to nurturing spiritual growth, fostering
-              education, and building a vibrant, inclusive community for all who seek belonging.
+              Established in 1990, the Westminster Islamic Community Centre is a welcoming home for
+              Muslims and neighbours across the heart of London. We are dedicated to nurturing
+              spiritual growth, fostering education, and building a vibrant, inclusive community for
+              all who seek belonging.
             </motion.p>
 
             <motion.p
