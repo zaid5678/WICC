@@ -1,12 +1,27 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
   visible: { opacity: 1, y: 0 },
 }
+
+const upcomingEvents = [
+  {
+    slug: 'stories-that-shape-the-believer',
+    title: 'Stories That Shape the Believer',
+    image: '/events/stories-that-shape-the-believer.jpeg',
+    date: 'Monday 3rd August',
+    time: '6:00pm – 9:00pm',
+    location: 'Lillington Gardens Community Centre',
+    description:
+      "Join us for this FREE event with Shaykh Navaid Aziz and Ustaadhah Aliyah Umm Raiyyan as we explore the inspiring life of Imam al-Bukhari (رحمه الله) and reflect on the timeless lessons we can take from his remarkable journey. In partnership with Rosebuds Sisters and Ethar Relief.",
+    ticketUrl: 'https://communityroadshow-westminster.eventbrite.co.uk',
+  },
+]
 
 export default function Events() {
   return (
@@ -65,73 +80,146 @@ export default function Events() {
           </p>
         </motion.div>
 
-        {/* Empty state */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-60px' }}
-          variants={fadeUp}
-          transition={{ duration: 0.7, delay: 0.1 }}
-          className="max-w-lg mx-auto text-center"
-        >
-          <div
-            className="rounded-2xl p-12"
-            style={{
-              background: '#fff',
-              boxShadow: '0 4px 30px rgba(26,34,68,0.08), 0 0 0 1px rgba(26,34,68,0.06)',
-            }}
-          >
-            {/* Crescent icon */}
-            <div className="flex justify-center mb-6">
-              <svg viewBox="0 0 48 48" fill="none" className="w-12 h-12 text-[#c9a84c]">
-                <path
-                  d="M24 6a18 18 0 1 0 18 18A14 14 0 0 1 24 6Z"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-
-            <h3
-              className="text-2xl text-[#1a2244] mb-3"
-              style={{ fontFamily: 'var(--font-display)', fontWeight: 500 }}
-            >
-              No upcoming events
-            </h3>
-            <p
-              className="text-[#1c1c1e]/55 text-sm leading-relaxed mb-8"
-              style={{ fontFamily: 'var(--font-body)' }}
-            >
-              There are no events listed at the moment. Join our WhatsApp community to be the first
-              to hear about upcoming gatherings, talks, and celebrations.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <a
-                href="https://chat.whatsapp.com/F69RFvbKGGkDbuNvXLHhsg"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-white text-sm font-medium transition-all duration-300 hover:shadow-[0_6px_20px_rgba(37,211,102,0.35)] hover:scale-105"
-                style={{ fontFamily: 'var(--font-body)', background: 'linear-gradient(135deg, #25D366, #1da851)' }}
-              >
-                Join WhatsApp Community
-              </a>
-              <Link
-                href="/jummah"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105"
+        {upcomingEvents.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {upcomingEvents.map((event, i) => (
+              <motion.div
+                key={event.slug}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: '-60px' }}
+                variants={fadeUp}
+                transition={{ duration: 0.7, delay: 0.1 * i }}
+                className="rounded-2xl overflow-hidden flex flex-col"
                 style={{
-                  fontFamily: 'var(--font-body)',
-                  background: 'rgba(26,34,68,0.06)',
-                  color: '#1a2244',
-                  border: '1px solid rgba(26,34,68,0.1)',
+                  background: '#fff',
+                  boxShadow: '0 4px 30px rgba(26,34,68,0.08), 0 0 0 1px rgba(26,34,68,0.06)',
                 }}
               >
-                View Jumu&apos;ah Times
-              </Link>
-            </div>
+                <div className="relative w-full aspect-[4/5]">
+                  <Image
+                    src={event.image}
+                    alt={event.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover"
+                  />
+                </div>
+
+                <div className="p-7 flex flex-col flex-grow">
+                  <h3
+                    className="text-xl text-[#1a2244] mb-3"
+                    style={{ fontFamily: 'var(--font-display)', fontWeight: 500 }}
+                  >
+                    {event.title}
+                  </h3>
+
+                  <div className="space-y-1.5 mb-4">
+                    <p
+                      className="text-[#c9a84c] text-sm font-medium"
+                      style={{ fontFamily: 'var(--font-body)' }}
+                    >
+                      {event.date} &middot; {event.time}
+                    </p>
+                    <p
+                      className="text-[#1c1c1e]/55 text-sm"
+                      style={{ fontFamily: 'var(--font-body)' }}
+                    >
+                      {event.location}
+                    </p>
+                  </div>
+
+                  <p
+                    className="text-[#1c1c1e]/65 text-sm leading-relaxed mb-6"
+                    style={{ fontFamily: 'var(--font-body)' }}
+                  >
+                    {event.description}
+                  </p>
+
+                  <a
+                    href={event.ticketUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-white text-sm font-medium transition-all duration-300 hover:brightness-110 hover:scale-[1.02]"
+                    style={{
+                      fontFamily: 'var(--font-body)',
+                      background: 'linear-gradient(135deg, #e0b84a, #c9a84c)',
+                    }}
+                  >
+                    Book Your Free Place
+                  </a>
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </motion.div>
+        ) : (
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+            variants={fadeUp}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="max-w-lg mx-auto text-center"
+          >
+            <div
+              className="rounded-2xl p-12"
+              style={{
+                background: '#fff',
+                boxShadow: '0 4px 30px rgba(26,34,68,0.08), 0 0 0 1px rgba(26,34,68,0.06)',
+              }}
+            >
+              {/* Crescent icon */}
+              <div className="flex justify-center mb-6">
+                <svg viewBox="0 0 48 48" fill="none" className="w-12 h-12 text-[#c9a84c]">
+                  <path
+                    d="M24 6a18 18 0 1 0 18 18A14 14 0 0 1 24 6Z"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+
+              <h3
+                className="text-2xl text-[#1a2244] mb-3"
+                style={{ fontFamily: 'var(--font-display)', fontWeight: 500 }}
+              >
+                No upcoming events
+              </h3>
+              <p
+                className="text-[#1c1c1e]/55 text-sm leading-relaxed mb-8"
+                style={{ fontFamily: 'var(--font-body)' }}
+              >
+                There are no events listed at the moment. Join our WhatsApp community to be the first
+                to hear about upcoming gatherings, talks, and celebrations.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <a
+                  href="https://chat.whatsapp.com/F69RFvbKGGkDbuNvXLHhsg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-white text-sm font-medium transition-all duration-300 hover:shadow-[0_6px_20px_rgba(37,211,102,0.35)] hover:scale-105"
+                  style={{ fontFamily: 'var(--font-body)', background: 'linear-gradient(135deg, #25D366, #1da851)' }}
+                >
+                  Join WhatsApp Community
+                </a>
+                <Link
+                  href="/jummah"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105"
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    background: 'rgba(26,34,68,0.06)',
+                    color: '#1a2244',
+                    border: '1px solid rgba(26,34,68,0.1)',
+                  }}
+                >
+                  View Jumu&apos;ah Times
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        )}
       </div>
     </section>
   )
